@@ -43,4 +43,14 @@ public:
         }
         queue_array[rear] = num;
     }
-};
+
+    void remove()
+    {
+        // cek apakah antrian kosong
+        if (front == -1)
+        {
+            cout << "queue underflow\n";
+            return;
+        }
+        cout << "\nelemen yang terhapus: " << queue_array[front] << "\n";
+    };
