@@ -73,4 +73,29 @@ public:
             }
         }
     }
+
+    void display()
+    {
+        int front_position = front;
+        int rear_position = rear;
+
+        // cek apakah antrian kosong
+        if (front == -1)
+        {
+            cout << "queue is empty\n";
+            return;
+        }
+
+        cout << "\nelements in the queue are...\n";
+
+        // jika front_position <= rear_position, iterasi dari front hingga rear
+        if (front_position <= rear_position)
+        {
+            while (front_position <= rear_position)
+            {
+                cout << queue_array[front_position] << "   ";
+                front_position++;
+            }
+        }
+    }
 };
