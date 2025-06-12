@@ -121,3 +121,9 @@ public:
         }
     }
 };
+
+int main()
+{
+    queues q;
+    char ch;
+}
