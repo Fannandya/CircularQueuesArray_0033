@@ -53,4 +53,24 @@ public:
             return;
         }
         cout << "\nelemen yang terhapus: " << queue_array[front] << "\n";
-    };
+
+        // cek jika antrian hanya memiliki satu elemen
+        if (front == rear)
+        {
+            front = -1;
+            rear = -1;
+        }
+        else
+        {
+            // jika elemen yang dihapus berada diposisi terakhir array, kembali ke array awal
+            if (front == max - 1)
+            {
+                front = 0;
+            }
+            else
+            {
+                front = front + 1;
+            }
+        }
+    }
+};
